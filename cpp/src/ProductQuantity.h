@@ -5,7 +5,6 @@
 #include "Product.h"
 
 class ProductQuantity {
-private:
 
 public:
     ProductQuantity(const Product& product, double quantity);
@@ -20,5 +19,15 @@ private:
 
 };
 
+ProductQuantity::ProductQuantity(const Product& product, double quantity)
+    : product(product), quantity(quantity) {}
+
+Product ProductQuantity::getProduct() const {
+    return product;
+}
+
+double ProductQuantity::getQuantity() const {
+    return quantity;
+}
 
 #endif //CPP_PRODUCTQUANTITY_H
